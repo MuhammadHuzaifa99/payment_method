@@ -70,7 +70,7 @@ userSchema.pre("save", function (next) {
   this.passwordChangedAt = Date.now() - 1000;
   next();
 });
-
+// check
 userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
   var encryptedPass = await bcrypt.hash(this.password, 12);
