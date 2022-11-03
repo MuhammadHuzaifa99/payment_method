@@ -1,6 +1,6 @@
 const express = require('express')
 const auth = require('./route/auth.route')
-const transaction = require('./route/transaction.auth')
+const transaction = require('./route/transaction.route')
 const cors = require('cors')
 const app = express()
 

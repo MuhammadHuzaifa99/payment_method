@@ -47,6 +47,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.methods.passwordVerification = async (password, encryptedPass) => {
+  console.log(password)
   return await bcrypt.compare(password, encryptedPass);
 };
 
