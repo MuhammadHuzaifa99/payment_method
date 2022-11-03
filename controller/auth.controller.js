@@ -29,7 +29,7 @@ exports.login = async (req, res) => {
     // password verification
     // paassword autherization
     if (!user || !(await user.passwordVerification(password, user.password))) {
-      res.status(401).json({
+      return res.status(401).json({
         msg: "error",
         error: "enter correct email and password",
       });
